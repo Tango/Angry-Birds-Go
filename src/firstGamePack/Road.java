@@ -96,8 +96,6 @@ public class Road extends JPanel implements ActionListener, Runnable{
 		
 	}
 	
-//=====================================================================================================================
-	
 //=====================================================================================================================	 
 	 	 
 	 private void drawMeterPanel(Graphics g){
@@ -120,6 +118,7 @@ public class Road extends JPanel implements ActionListener, Runnable{
 		sortedParticipantsList();
 		Iterator<Competitor> i = ListOfCompetitors.iterator();  
 		while(i.hasNext()){
+				
 					Competitor temp = i.next();
 					temp.drawParticipant(g);		
 		}
@@ -144,8 +143,7 @@ public class Road extends JPanel implements ActionListener, Runnable{
 		}
 		Collections.sort(AllParticipantsList);
 	}
-//=====================================================================================================================
- 
+
 //=====================================================================================================================
 	private void moveAllCompetitors(){
 	Iterator<Competitor> i = ListOfCompetitors.iterator();  
@@ -195,11 +193,11 @@ public class Road extends JPanel implements ActionListener, Runnable{
 		Random rand = new Random();
 		
 		  try {
-		  Thread.sleep(500+rand.nextInt(2000)); //2500
+		  Thread.sleep(500+rand.nextInt(2000)); 
  
-			ListOfCompetitors.add(new Competitor(1001,      // x 1105
-				240+rand.nextInt(185),        // y
-	80,	//		80+rand.nextInt(50),          // speed
+			ListOfCompetitors.add(new Competitor(1101,      
+				240+rand.nextInt(185),                      
+				70+rand.nextInt(50),                        
 				this));
 		  } catch (InterruptedException e) {
 					e.printStackTrace();

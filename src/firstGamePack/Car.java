@@ -83,10 +83,13 @@ public class Car extends movingObject{
 		 		g.drawImage(img,x,y, null);  // draw player
 		 		break;
 		 }
+		 
 	 }
 	
 //==================================================================
 	
+
+
 	public void go(){
 		distance = distance + (double)speed/90;
 		speed = speed + acceleration;
